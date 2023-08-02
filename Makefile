@@ -1,5 +1,4 @@
-# JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64/
-export "JAVA_HOME=\$(/usr/libexec/java_home)"
+JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64/
 
 CC=g++
 LIBRARY_OUTPUT=libjni.so
@@ -9,3 +8,7 @@ build_jni_lib:
 
 cleanJava:
 	find . -type f -iname \*.class -delete
+
+env:
+	sudo apt-get install openjdk-17-jdk-headless build-essential
+	
