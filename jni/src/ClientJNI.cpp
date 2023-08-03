@@ -4,7 +4,7 @@
 
 #include "../hdr/Object.hpp"
 
-static ObjectJni* objectJni = nullptr;
+static Object* object = nullptr;
 
 #ifdef __cplusplus
 extern "C"
@@ -17,7 +17,7 @@ JNIEXPORT jint JNICALL Java_ClientJNI_Start
   (JNIEnv *env, jobject self)
 {
     cout << __FUNCTION__ << endl;
-    objectJni = new ObjectJni();
+    object = new Object();
     return 0;
 }
 
